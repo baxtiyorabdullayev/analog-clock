@@ -9,15 +9,20 @@ body {
   background-color: #e0e0e0;
 }
 
+.clock-box,
+img,
+.hands-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 /* Cock face  */
 
 .clock-box {
   width: 20rem;
   height: 20rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   border-radius: 50%;
   background: linear-gradient(145deg, #cacaca, #f0f0f0);
   box-shadow: 5px 5px 14px #b1b1b1, -5px -5px 14px #ffffff;
@@ -26,10 +31,6 @@ body {
 img {
   width: 19rem;
   height: 19rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 /* Hands */
@@ -37,42 +38,34 @@ img {
   width: 15rem;
   height: 15rem;
   position: relative;
-  top: 50%;
+}
+
+.second,
+.minute,
+.hour {
+  position: absolute;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%);
+  transform-origin: bottom;
+  border-radius: 15px;
 }
 
 .second {
   width: 3px;
   height: 120px;
   background-color: red;
-  border-radius: 15px;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
-  transform-origin: bottom;
 }
 
 .minute {
   width: 5px;
   height: 90px;
   background-color: rgb(28, 28, 25);
-  border-radius: 15px;
-  position: absolute;
   top: 30px;
-  left: 50%;
-  transform: translate(-50%);
-  transform-origin: bottom;
 }
 
 .hour {
   width: 8px;
   height: 60px;
   background-color: black;
-  border-radius: 15px;
-  position: absolute;
   top: 60px;
-  left: 50%;
-  transform: translate(-50%);
-  transform-origin: bottom;
 }
